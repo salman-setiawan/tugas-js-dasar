@@ -166,26 +166,25 @@
       const elBtnCancel = document.querySelector('#btn-cancel');
       
       // EDIT HERE
-      function writeComment() {
-        document.getElementsByClassName("comment-from-section").removeAttribute("class");
-      }
+
+      elBtnComment.addEventListener('click', function() { 
+        let tampilComment = document.getElementById("comment-form-section");
+        tampilComment.classList.remove("d-none")
+        elBtnComment.classList.add("d-none")
+      })
 
       function submitComment() {
         event.preventDefault();
         let username = document.getElementById("input-username").value;
         let comment = document.getElementById("input-comment").value;
+
+        console.log(document.getElementById("input-username").value);
+        console.log(document.getElementById("input-comment").value);
       }
-      
-      let childDocument = document.createElement(li);
-      childDocument.class()
 
       document
         .getElementById("btn-submit")
         .addEventListener("click", () => submitComment(event));
-      
-      document
-        .getElementById("btn-comment")
-        .addEventListener("click", () => writeComment(event));
 
     </script>
   </body>
