@@ -120,8 +120,14 @@ function firstNonRepeatedChar(word) {
         return "kata tidak boleh dipisah"
     } 
     else {
-        return word;
+        for (let i = 0; i < word.length; i++) {
+            let c = word.charAt(i);
+            if (word.indexOf(c) == i && word.indexOf(c, i + 1) == -1) {
+                return c;
+            }
+        }
+        return '';
     }
 }
 
-console.log(firstNonRepeatedChar('hello world'))
+console.log(firstNonRepeatedChar('alloha'))
