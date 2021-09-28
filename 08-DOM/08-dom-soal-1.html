@@ -172,6 +172,54 @@
     <!-- JavaScript -->
     <script>
       /// EDIT HERE
+      document
+      .getElementById("card-01")
+        .addEventListener("click", () =>
+          clickedButton(
+            "card-01-title", 
+            "card-01-text",
+            "card-01-image"
+          )
+        );
+      
+      document
+      .getElementById("card-02")
+        .addEventListener("click", () =>
+          clickedButton(
+            "card-02-title", 
+            "card-02-text",
+            "card-02-image"
+          )
+        );
+
+      document
+      .getElementById("card-03")
+        .addEventListener("click", () =>
+          clickedButton(
+            "card-03-title", 
+            "card-03-text",
+            "card-03-image"
+          )
+        );
+
+      document
+      .getElementById("card-04")
+        .addEventListener("click", () =>
+          clickedButton(
+            "card-04-title", 
+            "card-04-text",
+            "card-04-image"
+          )
+        );
+
+      function clickedButton(title, desc, image) {
+        document.getElementById("modal-title").innerHTML = 
+          document.getElementById(title).innerHTML;
+        document.getElementById("modal-text").innerHTML = 
+          document.getElementById(desc).innerHTML;
+        document.getElementById("modal-image").src = 
+          document.getElementById(image).src;
+      }
     </script>
 
     <!-- Bootstrap Bundle with Popper -->

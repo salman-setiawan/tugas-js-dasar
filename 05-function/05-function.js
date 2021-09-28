@@ -18,19 +18,19 @@ function taxCalc(salary) {
     let pajak = ""
     if (salary < 5000000) {
         pajak = salary * 0
-        return "pajak sebesar Rp" + pajak
+        return "taxCalc should be " + pajak
     }
     else if (salary >= 5000000 && salary < 10000000) {
         pajak = salary * 5/100
-        return "pajak sebesar Rp" + pajak
+        return "taxCalc should be " + pajak
     }
     else if (salary >= 10000000 && salary < 20000000) {
         pajak = salary * 10/100
-        return "pajak sebesar Rp" + pajak
+        return "taxCalc should be " + pajak
     }
     else {
         pajak = salary * 20/100
-        return "pajak sebesar Rp" + pajak
+        return "taxCalc should be " + pajak
     }
 }
 
@@ -58,19 +58,19 @@ console.log(taxCalc("5000000"))
 function checkBMI(height, weight) {
     const BMI = (weight / (height ** 2)) * 10000
     if (BMI < 18.5) {
-        return BMI + "Under Weight"
+        return BMI + ' should be "Under Weight"'
     }
     else if (BMI < 18.5 && 24.9) {
-        return BMI + "Normal"
+        return BMI + ' should be "Normal"'
     }
     else if (BMI < 25 && 29.9) {
-        return BMI + "Over Weight"
+        return BMI + ' should be "Over Weight"'
     }
     else if (BMI < 30 && 34.9) {
-        return BMI + "Obese"
+        return BMI + ' should be "Obese"'
     }
     else {
-        return BMI + "Extremly Obese"
+        return BMI + ' should be "Extremly Obese"'
     }
 }
 
@@ -96,7 +96,7 @@ function convToUpperCase(sentence) {
     return kalimat.join(' ');
 } 
 
-console.log(convToUpperCase('hello worldwide'))
+console.log(convToUpperCase('hello bandung'))
 
 
 /// Soal - 04
@@ -124,4 +124,4 @@ function firstNonRepeatedChar(word) {
     }
 }
 
-console.log(firstNonRepeatedChar('abba'))
+console.log(firstNonRepeatedChar('hello world'))
