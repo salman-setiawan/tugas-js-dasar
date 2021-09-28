@@ -167,7 +167,8 @@
       
       // EDIT HERE
       function writeComment() {
-        document.getElementById("comment-form-section").classList.toggle("d-none");
+        document.getElementById("comment-form-section").classList.remove("d-none");
+        document.getElementById("btn-comment").classList.add("d-none");
       }
 
       function submitComment() {
@@ -194,16 +195,26 @@
         const parent3 = document.querySelector(".ms-2");
         parent3.prepend(newDiv2);
 
-        writeComment();
+        let selesaiComment = document.getElementById("comment-form-section"); 
+        selesaiComment.classList.add("d-none");
+        elBtnComment.classList.remove("d-none");
       }
 
       document
         .getElementById("btn-submit")
         .addEventListener("click", () => submitComment(event));
-        
+      
       document
         .getElementById("btn-comment")
         .addEventListener("click", () => writeComment());
+        
+      document
+        .getElementById("btn-cancel")
+        .addEventListener("click", () => {
+          let cancelComment = document.getElementById("comment-form-section"); 
+          cancelComment.classList.add("d-none");
+          document.getElementById("btn-comment").classList.remove("d-none");
+        });
 
     </script>
   </body>
