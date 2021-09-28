@@ -60,13 +60,13 @@ function checkBMI(height, weight) {
     if (BMI < 18.5) {
         return BMI + ' should be "Under Weight"'
     }
-    else if (BMI < 18.5 && 24.9) {
+    else if (18.5 < BMI && 24.9 > BMI) {
         return BMI + ' should be "Normal"'
     }
-    else if (BMI < 25 && 29.9) {
+    else if (25 < BMI && 29.9 > BMI) {
         return BMI + ' should be "Over Weight"'
     }
-    else if (BMI < 30 && 34.9) {
+    else if (30 < BMI && 34.9 > BMI) {
         return BMI + ' should be "Obese"'
     }
     else {

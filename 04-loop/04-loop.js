@@ -1,7 +1,7 @@
 /// Soal - 01
 /// Kamu diminta untuk membuat sebuah perulangan menggunakan for loop, untuk mencetak angka prima dari 1 ~ 100
 /// EDIT HERE
-let hasil
+let hasil = ''
 
 for (let angka = 2; angka <= 100; angka++) { 
     let pembagi = 0
